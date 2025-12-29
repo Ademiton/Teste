@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loja de Roupas Femininas</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+
+    <header class="site-header">
+
+        <div class="logo">
+            <h1>Nome da Loja</h1>
+        </div>
+
+        <!-- Barra de pesquisa -->
+        <div class="search-container">
+            <div class="search-box">
+                <input 
+                    type="search"
+                    id="searchInput"
+                    placeholder="Buscar produtos..."
+                    aria-label="Buscar produtos"
+                >
+
+                <button 
+                    type="button" 
+                    class="search-icon"
+                    aria-label="Pesquisar"
+                >
+                    🔍
+                </button>
+            </div>
+
+            <a href="#" class="cart-btn">
+                🛒
+                <span class="cart-count">0</span>
+            </a>
+        </div>
+
+        <!-- Área do usuário -->
+        <div class="user-area">
+            <span class="greeting">Olá ;)</span>
+            <div class="auth-links">
+                <a href="#">Entrar</a>
+                <span>|</span>
+                <a href="#">Cadastrar-se</a>
+            </div>
+        </div>
+
+    </header>
+    <!-- Barra secundária -->
+   <nav class="menu-bar">
+    <button class="menu-btn" aria-label="Menu">☰</button>
+
+    <div class="cep-area" id="cepArea">
+        <span id="cepText">Informe o CEP</span>
+        <button class="cep-toggle" aria-label="Informar CEP">▾</button>
+
+        <div class="cep-box" id="cepBox">
+            <input 
+                type="text" 
+                id="cepInput" 
+                placeholder="00000-000"
+                maxlength="9"
+            >
+            <button id="cepOk">OK</button>
+        </div>
+    </div>
+</nav>
+   
+    <!-- Conteúdo principal -->
+    <main>
+
+        <!-- Destaque principal -->
+        <section class="hero">
+            <h2>Moda feminina com estilo e preço acessível</h2>
+            <p>Roupas para o dia a dia e ocasiões especiais</p>
+            <button class="cta-btn">Ver produtos</button>
+        </section>
+
+        <!-- Categorias -->
+        <section class="categories">
+            <h3>Categorias</h3>
+
+            <div class="category-list">
+                <div class="category-item">Vestidos</div>
+                <div class="category-item">Blusas</div>
+                <div class="category-item">Calças</div>
+                <div class="category-item">Conjuntos</div>
+                <div class="category-item">Acessórios</div>
+            </div>
+        </section>
+
+        <!-- Produtos em destaque -->
+        <section class="products">
+            <h3>Destaques</h3>
+
+            <div class="products-carousel">
+            <button class="carousel-btn left" aria-label="Ver produtos anteriores">‹</button>
+
+            <div class="product-track" id="productTrack" tabindex="0" aria-live="polite">
+                <!-- Repita .product-card para cada produto -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="produto1.jpg" alt="Produto 1">
+                    </div>
+                    <h4>Produto 1</h4>
+                    <p>R$ 99,90</p>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="produto2.jpg" alt="Produto 2">
+                    </div>
+                    <h4>Produto 2</h4>
+                    <p>R$ 129,90</p>
+                </div>
+
+                <!-- mais product-card... -->
+            </div>
+
+            <button class="carousel-btn right" aria-label="Ver mais produtos">›</button>
+        </div>
+
+        <!-- Ofertas -->
+        <section class="offers">
+        <h3>Ofertas da Semana</h3>
+
+        <div class="offers-grid">
+            <div class="product-card offer">
+                <span class="offer-badge">OFERTA</span>
+
+                <div class="product-image">
+                    <img src="produto3.jpg" alt="Produto em oferta">
+                </div>
+
+                <h4>Vestido Floral</h4>
+
+                <p class="old-price">R$ 149,90</p>
+                <p class="price">R$ 99,90</p>
+            </div>
+
+            <!-- Repita para outros produtos -->
+        </div>
+        </section>
+
+    </main>
+    <!-- Voltar ao topo -->
+    <button id="backToTop" aria-label="Voltar ao topo">
+        ⬆
+    </button>
+    <!-- Rodapé -->
+    <footer class="footer">
+        <div class="footer-container">
+
+            <!-- Atendimento -->
+            <div class="footer-section">
+                <h4>Atendimento</h4>
+                <p>📱 WhatsApp: (89) 9xxxx-xxxx</p>
+                <p>⏰ Seg a Sex — 8h às 18h</p>
+            </div>
+
+            <!-- Pagamentos -->
+            <div class="footer-section">
+                <h4>Formas de pagamento</h4>
+                <p>PIX • Cartão de Crédito • Boleto</p>
+            </div>
+
+        </div>
+
+        <!-- Linha inferior -->
+        <div class="footer-bottom">
+            <p>© 2025 Nome da Loja — Todos os direitos reservados</p>
+            <div class="footer-legal">
+                <a href="#">Política de Privacidade</a>
+                <span>|</span>
+                <a href="#">Trocas e Devoluções</a>
+                <span>|</span>
+                <a href="#">Termos de Uso</a>
+            </div>
+            
+        </div>
+    </footer>
+
+    <script src="./script.js"></script>
+
+    <!-- Ícone de Atendimento -->
+    <a href="https://wa.me/5599999999999" 
+    class="atendimento-fixo" 
+    target="_blank"
+    aria-label="Atendimento via WhatsApp">
+        💬
+    </a>
+    <!-- Overlay -->
+    <div id="menuOverlay"></div>
+
+    <!-- Menu lateral -->
+    <aside id="sideMenu">
+        <button id="closeMenu" aria-label="Fechar menu">
+            <span></span>
+            <span></span>
+        </button>
+
+        <nav class="menu-links">
+            <a href="#">Início</a>
+            <a href="#">Novidades</a>
+            <a href="#">Promoções</a>
+            <a href="#">Sobre a Loja</a>
+        </nav>
+    </aside>
+</body>
+</html>
